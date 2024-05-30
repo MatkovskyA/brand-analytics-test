@@ -91,6 +91,7 @@ textarea:not([rows]) {
 }
 body {
   font-family: "Gravity", sans-serif;
+  padding-top: 52px;
 }
 
 .container {
@@ -108,6 +109,7 @@ a, button {
   background-color: #323a44;
   padding: 0 20px;
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -135,6 +137,7 @@ a, button {
   line-height: 1.23;
   color: #cbcfd8;
   position: relative;
+  font-weight: 400;
 }
 
 .nav-list__btn::after {
@@ -154,9 +157,11 @@ a, button {
   scale: 1.05;
 }
 
-.nav-list__btn:hover::after,
-.nav-list__btn:focus::after {
-  scale: 1.05;
+.nav-list__btn:focus,
+.nav-list__btn:hover {
+  background-color: #292f37;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .user {

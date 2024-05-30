@@ -1,19 +1,21 @@
 @font-face {
-  font-family: 'Gravity';  /* Задайте название для вашего шрифта */
-  src: url('../../resources/fonts/Gravity-Bold.otf') format('opentype'); /* Указываем, что это OpenType */
+  font-family: 'Gravity'; 
+  src: url('../../resources/fonts/Gravity-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gravity';  /* Задайте название для вашего шрифта */
-  src: url('../../resources/fonts/Gravity-Regular.otf') format('opentype'); /* Указываем, что это OpenType */
+  font-family: 'Gravity';
+  src: url('../../resources/fonts/Gravity-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   font-family: 'Gravity', sans-serif;
+  padding-top: 52px;
+  background-color: $bgColor;
 }
 
 .container {
@@ -24,8 +26,3 @@ body {
 a, button {
   cursor: pointer;
 }
-
-button:hover {
-
-}
-

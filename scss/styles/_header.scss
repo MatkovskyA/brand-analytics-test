@@ -4,6 +4,7 @@
   background-color: $headerBgColor;
   padding: 0 20px;
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -31,6 +32,7 @@
   line-height: 1.23;
   color: $headerTextColor;
   position: relative;
+  font-weight: 400;
 }
 
 .nav-list__btn::after {
@@ -50,9 +52,10 @@
   scale: 1.05;
 }
 
-.nav-list__btn:hover::after,  
-.nav-list__btn:focus::after {
-  scale: 1.05;
+.nav-list__btn:focus {
+  background-color: $activeBtnBgColor;
+  color: $whiteColor;
+  font-weight: 700;
 }
 
 .user {
@@ -70,8 +73,4 @@
 .user-button {
   border: none;
   background-color: $headerBgColor;
-}
-
-.active {
-  background-color: $activeBtnBgColor;
 }
