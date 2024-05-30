@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Gravity';  /* Задайте название для вашего шрифта */
+  src: url('../../resources/fonts/Gravity-Bold.otf') format('opentype'); /* Указываем, что это OpenType */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gravity';  /* Задайте название для вашего шрифта */
+  src: url('../../resources/fonts/Gravity-Regular.otf') format('opentype'); /* Указываем, что это OpenType */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Gravity', sans-serif;
+}
+
+.container {
+  width: 772px;
+  margin: 0 auto;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+button:hover {
+
+}
+

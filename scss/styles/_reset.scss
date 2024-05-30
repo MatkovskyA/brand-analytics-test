@@ -12,15 +12,15 @@ html {
 }
 
 /* Отступы обнуляем */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
+body, h1, h2, h3, h4, p, ul,
+figure, blockquote, dl, dd, button {
   margin: 0;
   padding: 0;
 }
 
 /* Обнуление стилей списков */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -40,6 +40,10 @@ button, input, label {
 h1, h2,
 h3, h4 {
   text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Ссылки без класса получают стиль по умолчанию */

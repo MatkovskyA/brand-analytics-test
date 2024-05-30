@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: $headerBgColor;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.header-logo {
+  position: absolute;
+  top: 0;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  color: $headerTextColor;
+}
+
+.nav-list__btn {
+  background-color: inherit;
+  border: none;
+  padding: 17px 23px 19px;
+  font-size: 13px;
+  line-height: 1.23;
+  color: $headerTextColor;
+  position: relative;
+}
+
+.nav-list__btn::after {
+  display: block;
+	position: absolute;
+	left: 10%; 
+	width: 0;
+	height: 2px; 
+	background-color: $btnLineActive; 
+	content: "";
+	transition: all 0.3s ease-out;
+}
+
+.nav-list__btn:hover::after,  
+.nav-list__btn:focus::after {
+  width: 80%;
+  scale: 1.05;
+}
+
+.nav-list__btn:hover::after,  
+.nav-list__btn:focus::after {
+  scale: 1.05;
+}
+
+.user {
+  display: flex;
+  gap: 12px;
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-button {
+  border: none;
+  background-color: $headerBgColor;
+}
+
+.active {
+  background-color: $activeBtnBgColor;
+}
