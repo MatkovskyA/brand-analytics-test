@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Эти префиксы позволят сохранить размер шрифта */
@@ -11,11 +13,9 @@ html {
   text-size-adjust: none;
 }
 
-/* Отступы обнуляем */
-body, h1, h2, h3, h4, p, ul,
-figure, blockquote, dl, dd, button {
-  margin: 0;
-  padding: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal;
 }
 
 /* Обнуление стилей списков */
@@ -32,7 +32,7 @@ body {
 
 /* Баланс переноса текста в заголовках */
 h1, h2, h3, h4,
-button, input, label {
+button, input, label, select {
   line-height: 1.1;
 }
 
@@ -63,6 +63,7 @@ picture {
 input, button,
 textarea, select {
   font: inherit;
+  outline: none;
 }
 
 /* для пустых <textarea> */

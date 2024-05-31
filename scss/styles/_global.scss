@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Gravity', sans-serif;
-  padding-top: 52px;
+  padding-top: 72px;
   background-color: $bgColor;
 }
 
@@ -23,6 +23,10 @@ body {
   margin: 0 auto;
 }
 
-a, button {
+a, button, label, input, textarea {
   cursor: pointer;
+}
+
+h5 {
+  font-size: 12px;
 }

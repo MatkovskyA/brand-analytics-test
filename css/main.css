@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Эти префиксы позволят сохранить размер шрифта */
@@ -12,11 +14,9 @@ html {
   text-size-adjust: none;
 }
 
-/* Отступы обнуляем */
-body, h1, h2, h3, h4, p, ul,
-figure, blockquote, dl, dd, button {
-  margin: 0;
-  padding: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal;
 }
 
 /* Обнуление стилей списков */
@@ -33,7 +33,7 @@ body {
 
 /* Баланс переноса текста в заголовках */
 h1, h2, h3, h4,
-button, input, label {
+button, input, label, select {
   line-height: 1.1;
 }
 
@@ -65,6 +65,7 @@ picture {
 input, button,
 textarea, select {
   font: inherit;
+  outline: none;
 }
 
 /* для пустых <textarea> */
@@ -78,20 +79,21 @@ textarea:not([rows]) {
 }
 
 @font-face {
-  font-family: "Gravity"; /* Задайте название для вашего шрифта */
-  src: url("../../resources/fonts/Gravity-Bold.otf") format("opentype"); /* Указываем, что это OpenType */
+  font-family: "Gravity";
+  src: url("../../resources/fonts/Gravity-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gravity"; /* Задайте название для вашего шрифта */
-  src: url("../../resources/fonts/Gravity-Regular.otf") format("opentype"); /* Указываем, что это OpenType */
+  font-family: "Gravity";
+  src: url("../../resources/fonts/Gravity-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 body {
   font-family: "Gravity", sans-serif;
-  padding-top: 52px;
+  padding-top: 72px;
+  background-color: #f5f7fa;
 }
 
 .container {
@@ -99,8 +101,12 @@ body {
   margin: 0 auto;
 }
 
-a, button {
+a, button, label, input, textarea {
   cursor: pointer;
+}
+
+h5 {
+  font-size: 12px;
 }
 
 .header {
@@ -157,8 +163,7 @@ a, button {
   scale: 1.05;
 }
 
-.nav-list__btn:focus,
-.nav-list__btn:hover {
+.nav-list__btn:focus {
   background-color: #292f37;
   color: #ffffff;
   font-weight: 700;
@@ -181,6 +186,167 @@ a, button {
   background-color: #323a44;
 }
 
-.active {
-  background-color: #292f37;
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #292f37;
+  margin-bottom: 20px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+}
+
+.form-items {
+  padding: 15px 20px 20px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.select-wrapper {
+  background-color: #f6f6f7;
+  border: 1px solid #cbcfd8;
+  border-radius: 4px;
+}
+
+.form-item__select {
+  background-color: #f6f6f7;
+  width: 99%;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-item__select {
+  padding: 8px 12px;
+}
+
+.form-item__desc {
+  color: #4c515c;
+}
+
+.form-item__textarea {
+  border: 1px solid #cbcfd8;
+  border-radius: 4px;
+  width: 100%;
+  color: #4c515c;
+  resize: none;
+  padding: 7px 12px;
+}
+
+.form-items__padding {
+  padding: 14px 20px 20px 56px;
+}
+
+.form-items__title {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.form-items__title::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../resources/icons/done.svg");
+  left: -35px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.form-items__link {
+  color: #4870b7;
+}
+
+.form-item__subtitle {
+  display: block;
+  color: #979ca9;
+  margin-bottom: 6px;
+}
+
+.form-item__subtitles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alerts-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.alert-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.alert-info label {
+  color: #4c515c;
+}
+
+input[type=radio] {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #979ca9;
+}
+
+input[type=radio]:checked::before {
+  border: 1px solid #5b85ce;
+}
+
+input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #5b85ce;
+  transform: translate(-50%, -50%);
+}
+
+.clarifications {
+  display: flex;
+  gap: 12px;
+}
+
+.clarifications-wrapper__date {
+  max-width: 236px;
+}
+.clarifications-wrapper__date .form-item__select {
+  width: 97%;
+}
+
+.select-wrapper__time {
+  width: 112px;
+}
+.select-wrapper__time .form-item__select {
+  width: 96%;
+}
+
+.select-items {
+  display: flex;
+  gap: 12px;
 }/*# sourceMappingURL=main.css.map */

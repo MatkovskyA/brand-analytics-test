@@ -1,0 +1,167 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-title {
+  font-size: 20px;
+  line-height: 24px;
+  color: $darkBlueColor;
+  margin-bottom: 20px;
+  letter-spacing: 1.6px;
+  font-weight: 700;
+}
+
+.form-items {
+  padding: 15px 20px 20px 20px;
+  background-color: $whiteColor;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.select-wrapper {
+  background-color: #f6f6f7;
+  border: 1px solid #cbcfd8;
+  border-radius: 4px;
+}
+
+.form-item__select {
+  background-color: #f6f6f7;
+  width: 99%;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-item__select {
+  padding: 8px 12px;
+}
+
+.form-item__desc {
+  color: $darkGrayFormText;
+}
+
+.form-item__textarea {
+  border: 1px solid #cbcfd8;
+  border-radius: 4px;
+  width: 100%;
+  color: $darkGrayFormText;
+  resize: none;
+  padding: 7px 12px;
+}
+
+.form-items__padding {
+  padding: 14px 20px 20px 56px;
+}
+
+.form-items__title {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.form-items__title::before {
+  content: '';
+  position: absolute;
+  background-image: url('../../resources/icons/done.svg');
+  left: -35px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.form-items__link {
+  color: $formLinksColor;
+}
+
+.form-item__subtitle {
+  display: block;
+  color: $formSubtitleColor;
+  margin-bottom: 6px;
+}
+
+.form-item__subtitles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alerts-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.alert-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  label {
+    color: $darkGrayFormText;
+  }
+}
+
+input[type='radio'] {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid $formSubtitleColor;
+}
+
+input[type='radio']:checked::before {
+  border: 1px solid $radioInputColor;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $radioInputColor;
+  transform: translate(-50%, -50%);
+}
+
+.clarifications {
+  display: flex;
+  gap: 12px;
+}
+
+.clarifications-wrapper__date {
+  max-width: 236px;
+
+  .form-item__select {
+    width: 97%;
+  }
+}
+
+.select-wrapper__time {
+  width: 112px;
+  
+  .form-item__select {
+    width: 96%;
+  }
+}
+
+.select-items {
+  display: flex;
+  gap: 12px;
+}

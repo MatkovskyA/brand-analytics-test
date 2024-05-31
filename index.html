@@ -37,27 +37,6 @@
           <li>
             <button class="nav-list__btn">Помощь</button>
           </li>
-          <!-- <li class="nav-list__item">
-            <a href="#">Темы</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#">Сравнение тем</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#">Подписка</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#">Оповещение</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#">Журнал</a>
-          </li class="nav-list__item">
-          <li>
-            <a href="#">Настройки</a>
-          </li class="nav-list__item">
-          <li>
-            <a href="#">Помощь</a>
-          </li> -->
         </ul>
       </nav>
     </div>
@@ -72,28 +51,132 @@
   </header>
   <main>
     <div class="container">
-      <form class="form" action="" class="form">
-        <h1 class="form-title">Параметры подписки</h1>
+      <form class="form" action="" method="post">
+        <h1 class="form-title">Редактирование подписки</h1>
         <!-- Блок 1 -->
-          <p>Получать</p>
-
-          <p>E-mail</p>
-
+        <div class="form-wrapper">
+          <div class="form-items form-items__padding">
+            <div>
+              <h2 class="form-items__title">Параметры подписки сохранены</h2>
+              <p class="form-item__desc">Перейти к созданию <a class="form-items__link" href="#">новой подписки</a> или к <a class="form-items__link" href="#"> списку подписок</a></p>
+            </div>
+          </div>
+          <div class="form-items">
+            <div>
+              <h5 class="form-item__subtitle">Тема</h5>
+              <div class="select-wrapper">
+                <select class="form-item__select" name="" id="" disabled>
+                  <option value="">ИА тема</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="form-item__subtitles">
+                <h5 class="form-item__subtitle">E-mail</h5>
+                <h5 class="form-item__subtitle">Можно ввести несколько email через запятую (не более 20)</h5>
+              </div>
+              <textarea class="form-item__textarea" name="" id=""></textarea>
+            </div>
+          </div>
         <!-- Блок 2 -->
-          <p>Получать</p>
+        <!-- Поставил единую группу, для варианта выбора. Разделив группы(name) будет возможность выбрать оба варианта -->
+          <div class="form-items">
+            <div class="alerts">
+              <div class="alerts-wrapper">
+                <h5 class="form-item__subtitle">Получать</h5>
+                <div class="alerts-inner">
+                  <div class="alert-info">
+                    <input type="radio" name="radio1" id="message" value="new-messages">
+                    <label for="message">Новые сообщения</label>
+                  </div>
+                  <div class="alert-info">
+                    <input type="radio" name="radio1" id="report" value="report">
+                    <label for="report">Отчет</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clarifications">
+              <div class="clarifications-wrapper clarifications-wrapper__date">
+                <h5 class="form-item__subtitle">Периодичность</h5>
+                <div class="select-wrapper">
+                  <select class="form-item__select" name="" id="">
+                    <option value="">Раз в месяц</option>
+                    <option value="">Раз в две недели</option>
+                    <option value="">Раз в неделю</option>
+                    <option value="">Раз в день</option>
+                    <option value="">Раз в десять дней</option>
+                  </select>
+                </div>
+              </div>
+              <div class="clarifications-wrapper">
+                <h5 class="form-item__subtitle">Время получения (UTC+3)</h5>
+                <div class="select-items">
+                  <div class="select-wrapper select-wrapper__time">
+                    <select class="form-item__select" name="" id="">
+                      <option value="01">01 ч.</option>
+                      <option value="02">02 ч.</option>
+                      <option value="03">03 ч.</option>
+                      <option value="04">04 ч.</option>
+                      <option value="05">05 ч.</option>
+                      <option value="06">06 ч.</option>
+                      <option value="07">07 ч.</option>
+                      <option value="08">08 ч.</option>
+                      <option value="09">09 ч.</option>
+                      <option value="10">10 ч.</option>
+                      <option value="11">11 ч.</option>
+                      <option value="12">12 ч.</option>
+                      <option value="13">13 ч.</option>
+                      <option value="14">14 ч.</option>
+                      <option value="15">15 ч.</option>
+                      <option value="16">16 ч.</option>
+                      <option value="17">17 ч.</option>
+                      <option value="18">18 ч.</option>
+                      <option value="19">19 ч.</option>
+                      <option value="20">20 ч.</option>
+                      <option value="21">21 ч.</option>
+                      <option value="22">22 ч.</option>
+                      <option value="23">23 ч.</option>
+                      <option value="00">00 ч.</option>
+                    </select>
+                  </div>
+                  <div class="select-wrapper select-wrapper__time">
+                    <select class="form-item__select" name="" id="">
+                      <option value="05">05 мин.</option>
+                      <option value="10">10 мин.</option>
+                      <option value="15">15 мин.</option>
+                      <option value="20">20 мин.</option>
+                      <option value="25">25 мин.</option>
+                      <option value="30">30 мин.</option>
+                      <option value="35">35 мин.</option>
+                      <option value="40">40 мин.</option>
+                      <option value="45">45 мин.</option>
+                      <option value="50">50 мин.</option>
+                      <option value="55">55 мин.</option>
+                    </select>
+                  </div>
+                </div>
 
+              </div>
+            </div>
+          </div>
+  
         <!-- Блок 3 -->
           <p>Формат</p>
+          <div class="form-items">
 
+          </div>
         <!-- Блок 4 -->
           <p>Фильтр</p>
-
+  
         <!-- Блок 5 -->
           <p>Состав данных</p>
-
+  
         <!-- Блок 6 -->
           <p>Подписка</p>
           <input type="submit" name="" id="">
+        </div>
+
       </form>
     </div>
   </main>
