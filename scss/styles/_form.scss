@@ -22,20 +22,11 @@
   gap: 16px;
 }
 
-.select-wrapper {
+.form-item__select {
   background-color: #f6f6f7;
   border: 1px solid #cbcfd8;
   border-radius: 4px;
-}
-
-.form-item__select {
-  background-color: #f6f6f7;
-  width: 99%;
-  border: none;
-  border-radius: 4px;
-}
-
-.form-item__select {
+  width: 100%;
   padding: 8px 12px;
 }
 
@@ -147,21 +138,42 @@ input[type='radio']:checked::after {
 
 .clarifications-wrapper__date {
   max-width: 236px;
-
-  .form-item__select {
-    width: 97%;
-  }
+  width: 100%;
 }
 
 .select-wrapper__time {
   width: 112px;
-  
-  .form-item__select {
-    width: 96%;
-  }
 }
 
 .select-items {
   display: flex;
   gap: 12px;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.form-item__select {
+	/* for Firefox */
+	-moz-appearance: none;
+	/* for Chrome */
+	-webkit-appearance: none;
+}
+.form-item__select::-ms-expand {
+	/* IE */
+	display: none;
+}
+
+.select-wrapper::after {
+	content: "";
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+	right: 12px;
+	width: 16px;
+	height: 10px;
+	background: url(../../resources/icons/arrow-select-gray1.svg);
+	background-repeat: no-repeat;
+  background-position: center center;
 }
