@@ -86,11 +86,11 @@
                 <h5 class="form-item__subtitle">Получать</h5>
                 <div class="alerts-inner">
                   <div class="alert-info">
-                    <input type="radio" name="radio1" id="message" value="new-messages">
+                    <input type="radio" name="radio1" id="message" value="Новые сообщения">
                     <label for="message">Новые сообщения</label>
                   </div>
                   <div class="alert-info">
-                    <input type="radio" name="radio1" id="report" value="report">
+                    <input type="radio" name="radio1" id="report" value="Отчет">
                     <label for="report">Отчет</label>
                   </div>
                 </div>
@@ -101,11 +101,11 @@
                 <h5 class="form-item__subtitle">Периодичность</h5>
                 <div class="select-wrapper">
                   <select class="form-item__select" name="" id="">
-                    <option value="">Раз в месяц</option>
-                    <option value="">Раз в две недели</option>
-                    <option value="">Раз в неделю</option>
-                    <option value="">Раз в день</option>
-                    <option value="">Раз в десять дней</option>
+                    <option value="Раз в месяц">Раз в месяц</option>
+                    <option value="Раз в две недели">Раз в две недели</option>
+                    <option value="Раз в неделю">Раз в неделю</option>
+                    <option value="Раз в день">Раз в день</option>
+                    <option value="Раз в десять дней">Раз в десять дней</option>
                   </select>
                 </div>
               </div>
@@ -156,25 +156,148 @@
                     </select>
                   </div>
                 </div>
-
+              </div>
+            </div>
+          </div>
+        <!-- Блок 3 -->
+          <div class="form-items">
+            <h3>Формат</h3>
+            <div class="format">
+              <div class="format-type">
+                <input type="radio" class="format-type__excel" name="format" id="excel" value="excel">
+                <label for="excel">Excel</label>
+              </div>              
+              <div class="format-type">
+                <input type="radio" class="format-type__word" name="format" id="word" value="word">
+                <label for="word">Word</label>
+              </div>
+              <div class="format-type">
+                <input type="radio" class="format-type__pdf" name="format" id="pdf" value="pdf">
+                <label for="pdf">Pdf</label>
+              </div>
+            </div>
+            <div>
+              <h5 class="form-item__subtitle">Заголовок</h5>
+              <div class="input-wrapper">
+                <input type="text" name="title" placeholder="Заголовок">
+              </div>
+            </div>
+            <div>
+              <h5 class="form-item__subtitle">Подзаголовок</h5>
+              <div class="input-wrapper">
+                <input type="text" name="social-media" placeholder="Анализ упоминаний в социальных медиа">
+              </div>
+            </div>
+          </div>
+          <div class="form-items">
+            <h3>Фильтр данных для отчета</h3>
+            <div class="filter-items">
+              <div class="filter-item">
+                <input type="radio" class="format-type__excel" name="format" id="all-topic" value="Вся тема">
+                <label for="all-topic">Вся тема</label>
+              </div>              
+              <div class="filter-item">
+                <input type="radio" class="format-type__word" name="format" id="selected-tags" value="Выбранные теги">
+                <label for="selected-tags">Выбранные теги</label>
+              </div>
+              <div class="filter-item">
+                <input type="radio" class="format-type__pdf" name="format" id="personal-filter" value="Выбранные персональные фильтры">
+                <label for="personal-filter">Выбранные персональные фильтры</label>
               </div>
             </div>
           </div>
   
-        <!-- Блок 3 -->
-          <p>Формат</p>
-          <div class="form-items formic">
-            <select class="sel" name="" id="">
-              <option value="45">45 мин.</option>
-              <option value="50">50 мин.</option>
-              <option value="55">55 мин.</option>
-            </select>
-          </div>
-        <!-- Блок 4 -->
-          <p>Фильтр</p>
-  
         <!-- Блок 5 -->
-          <p>Состав данных</p>
+        <div class="form-items">
+          <h3>Состав данных</h3>
+          <div class="data-items">
+            <div class="data-column">
+              <div class="data-item">
+                <div class="data-item__disabled">
+                  <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <rect fill="#f6f6f7" width="16" height="16" rx="2"/>
+                        <path d="M11.95 5.05a1 1 0 0 1 0 1.414l-4.243 4.243a.995.995 0 0 1-.53.277l-.118.014h-.118a.996.996 0 0 1-.648-.29L4.172 8.585a1 1 0 1 1 1.414-1.414L7 8.585l3.536-3.535a1 1 0 0 1 1.414 0z" fill="#cbcfd8"/>
+                    </g>
+                  </svg>
+                </div>
+                <input type="checkbox" class="data-items__checkbox visible" name="data" id="summary-data" value="Сводные данные" disabled>
+                <label for="summary-data">Сводные данные</label>
+              </div>              
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="mentions" value="Упоминания">
+                <label for="mentions">Упоминания (максимум 20 000)</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="tonality" value="Тональность">
+                <label for="tonality">Тональность</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="sources" value="Источники">
+                <label for="sources">Источники</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="authors" value="Авторы">
+                <label for="authors">Авторы</label>
+              </div>  
+            </div>
+            <div class="data-column">
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="communities" value="Сообщества">
+                <label for="communities">Сообщества</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="geography" value="География">
+                <label for="geography">География</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="tags" value="Теги">
+                <label for="tags">Теги</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="links" value="Ссылки">
+                <label for="links">Ссылки</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="popular-words" value="Популярные слова">
+                <label for="popular-words">Популярные слова</label>
+              </div>  
+            </div>
+            <div class="data-column">
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="persons" value="Персоны">
+                <label for="persons">Персоны</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="legal-entities" value="Юридические лица">
+                <label for="legal-entities">Юридические лица</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="locations" value="Места">
+                <label for="locations">Места</label>
+              </div>  
+              <div class="data-item">
+                <input type="checkbox" class="data-items__checkbox" name="data" id="competitors" value="Сравнение с конкурентами">
+                <label for="competitors">Сравнение с конкурентами</label>
+              </div>  
+            </div>
+          </div>
+          <div class="alerts">
+            <div class="alerts-wrapper">
+              <h5 class="form-item__subtitle">Язык</h5>
+              <div class="alerts-inner">
+                <div class="alert-info">
+                  <input type="radio" name="language" id="russian" value="Русский">
+                  <label for="russian">Русский</label>
+                </div>
+                <div class="alert-info">
+                  <input type="radio" name="language" id="english" value="Английский">
+                  <label for="english">Английский</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
   
         <!-- Блок 6 -->
           <p>Подписка</p>
@@ -187,5 +310,6 @@
   <footer>
 
   </footer>
+  <script src="./index.js"></script>
 </body>
 </html>

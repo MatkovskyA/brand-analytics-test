@@ -38,7 +38,7 @@ button, input, label, select {
 
 /* Balance text wrapping on headings */
 h1, h2,
-h3, h4 {
+h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
@@ -62,7 +62,7 @@ picture {
 /* Наследуем шрифт */
 input, button,
 textarea, select {
-  font: inherit;
+  font-family: inherit;
   outline: none;
 }
 
