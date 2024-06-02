@@ -530,4 +530,16 @@ label {
 }
 .data-items .data-items__checkbox:checked.data-items__checkbox::after {
   opacity: 1;
+}
+
+.languages-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.languages-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }/*# sourceMappingURL=main.css.map */
