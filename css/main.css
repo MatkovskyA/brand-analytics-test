@@ -28,7 +28,6 @@ ol {
 /* Меньшая высота строк */
 body {
   min-height: 100vh;
-  line-height: 1.5;
 }
 
 /* Баланс переноса текста в заголовках */
@@ -101,12 +100,17 @@ body {
   margin: 0 auto;
 }
 
-a, button, label, input, textarea {
+a, button, label, input, textarea, select {
   cursor: pointer;
 }
 
 h5 {
   font-size: 12px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 input[type=radio],
@@ -116,8 +120,8 @@ input[type=checkbox] {
 }
 
 label {
-  display: inline-block;
   word-break: break-all;
+  font-size: 13px;
 }
 
 .header {
@@ -142,6 +146,7 @@ label {
 
 .nav-list {
   display: flex;
+  align-items: center;
   height: 100%;
   justify-content: space-between;
   color: #cbcfd8;
@@ -187,8 +192,8 @@ label {
 }
 
 .user-icon {
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -211,6 +216,7 @@ label {
   margin-bottom: 20px;
   letter-spacing: 1.6px;
   font-weight: 700;
+  padding-left: 4px;
 }
 
 .form-items {
@@ -239,6 +245,7 @@ label {
 
 .form-item__desc {
   color: #4c515c;
+  font-size: 13px;
 }
 
 .form-item__textarea {
@@ -257,6 +264,8 @@ label {
 .form-items__title {
   position: relative;
   margin-bottom: 8px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .form-items__title::before {
@@ -295,10 +304,12 @@ label {
   align-items: center;
   gap: 8px;
 }
-.alert-info label {
+
+label {
   color: #4c515c;
 }
-.alert-info input[type=radio] {
+
+input[type=radio] {
   position: relative;
   min-width: 16px;
   height: 16px;
@@ -306,7 +317,8 @@ label {
   -moz-appearance: none;
   appearance: none;
 }
-.alert-info input[type=radio]::before {
+
+input[type=radio]::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -318,10 +330,12 @@ label {
   background-color: white;
   border: 1px solid #979ca9;
 }
-.alert-info input[type=radio]:checked::before {
+
+input[type=radio]:checked::before {
   border: 1px solid #5b85ce;
 }
-.alert-info input[type=radio]:checked::after {
+
+input[type=radio]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -378,9 +392,9 @@ label {
 }
 
 .format-type {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  gap: 12px;
   min-width: 112px;
   padding: 8px;
   border-radius: 4px;
@@ -392,7 +406,6 @@ label {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: auto;
 }
 .format-type .format-type__excel::before {
   content: "";
@@ -402,6 +415,9 @@ label {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border: none;
   border-radius: 0%;
   background-image: url("../../resources/icons/xls.svg");
@@ -414,6 +430,9 @@ label {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border: none;
   border-radius: 0%;
   background-image: url("../../resources/icons/docx.svg");
@@ -426,9 +445,30 @@ label {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border: none;
   border-radius: 0%;
   background-image: url("../../resources/icons/pdf.svg");
+}
+.format-type input[type=radio]:checked::before,
+.format-type input[type=radio]:checked::after {
+  border: none;
+}
+.format-type input[type=radio]:checked::after {
+  display: none;
+}
+.format-type input[type=radio]:checked::before {
+  background-color: #d8e4f9;
+}
+.format-type input[type=radio]:checked::before + .format-type {
+  background-color: #d8e4f9;
+}
+.format-type label {
+  width: 100%;
+  line-height: 2.3;
+  padding-left: 12px;
 }
 
 .format-type__bgColor {
@@ -447,21 +487,29 @@ label {
 
 .filter-items {
   display: flex;
+  align-items: center;
 }
 .filter-items .filter-item {
-  color: #4870b7;
   background-color: #ffffff;
-  padding: 3px 10px;
+  padding: 2px 10px;
   border-radius: 11px;
+}
+.filter-items .filter-item label {
+  color: #4870b7;
+  font-size: 12px;
 }
 .filter-items .filter-item__checked {
   color: #ffffff;
   background-color: #4870b7;
 }
+.filter-items .filter-item__checked label {
+  color: #ffffff;
+}
 .filter-items input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: none;
 }
 
 .data-items {
@@ -542,4 +590,77 @@ label {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.subscription-wrapper {
+  padding: 6px 24px 24px;
+}
+
+.subscription__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-check {
+  margin-bottom: 35px;
+}
+
+.subscription__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.subscription__checkBtn {
+  display: inline-block;
+  position: relative;
+  padding-left: 42px;
+  font-size: 13px;
+  line-height: 1.23;
+}
+
+.subscription__checkBtn::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 48%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 20px;
+  background-color: #babdc7;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.subscription__checkBtn::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 48%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.subscription__input:checked + .subscription__checkBtn::after {
+  background-color: #8fc144;
+}
+
+.subscription__input:checked + .subscription__checkBtn::before {
+  left: 13px;
+}
+
+.subscription-btn__save {
+  font-size: 13px;
+  line-height: 1.23;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #8fc144;
+  border-radius: 4px;
+  border: none;
 }/*# sourceMappingURL=main.css.map */

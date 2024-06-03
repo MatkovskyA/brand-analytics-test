@@ -23,12 +23,17 @@ body {
   margin: 0 auto;
 }
 
-a, button, label, input, textarea {
+a, button, label, input, textarea, select {
   cursor: pointer;
 }
 
 h5 {
   font-size: 12px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 input[type='radio'],
@@ -38,6 +43,6 @@ input[type='checkbox'] {
 }
 
 label {
-  display: inline-block;
   word-break: break-all;
+  font-size: 13px;
 }
