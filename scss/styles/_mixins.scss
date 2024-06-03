@@ -12,3 +12,10 @@
   border: none;
   border-radius: 0%;
 }
+
+@mixin styleTitle {
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  color: $darkBlueColor;
+}

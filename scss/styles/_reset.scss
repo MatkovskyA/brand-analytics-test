@@ -13,7 +13,12 @@ html {
   text-size-adjust: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 16px;
   font-weight: normal;
 }
@@ -30,14 +35,24 @@ body {
 }
 
 /* Баланс переноса текста в заголовках */
-h1, h2, h3, h4,
-button, input, label, select {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label,
+select {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
@@ -59,8 +74,10 @@ picture {
 }
 
 /* Наследуем шрифт */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: inherit;
   outline: none;
 }

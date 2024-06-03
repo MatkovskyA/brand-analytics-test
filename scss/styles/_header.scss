@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-  background-color: $headerBgColor;
+  background-color: $darkBgColor;
   padding: 0 20px;
   position: fixed;
   z-index: 10;
@@ -74,5 +74,5 @@
 
 .user-button {
   border: none;
-  background-color: $headerBgColor;
+  background-color: $darkBgColor;
 }

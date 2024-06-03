@@ -1,0 +1,53 @@
+.aside {
+  position: fixed;
+  top: 0;
+  max-width: 200px;
+  height: 100%;
+  background-color: $whiteColor;
+  z-index: 3;
+}
+
+.nav-wrapper {
+  padding-top: 70px;
+}
+
+.nav-title {
+  @include styleTitle;
+  margin-bottom: 20px;
+  margin: 0 20px 10px;
+
+}
+
+.nav-title::after {
+  content: '';
+  position: absolute;
+  background-image: url("../../resources/icons/icon-14-addtheme.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 14px;
+  height: 14px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-list__item button {
+  padding: 10px 20px;
+  border: none;
+  border-top: 1px solid $borderGrayColor;
+  color: $formLinksColor;
+  font-size: 12px;
+  background-color: $whiteColor;
+  transition: all .5s;
+}
+
+.nav-list__item:last-child {
+  border-bottom: 1px solid $borderGrayColor;
+}
+
+.nav-list__item button:focus {
+  background-color: $borderGrayColor;
+  color: $darkBlueColor;
+  font-weight: 700;
+  transition: all .5s;
+}
