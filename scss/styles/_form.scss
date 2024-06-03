@@ -65,7 +65,7 @@
 .form-items__title::before {
   content: '';
   position: absolute;
-  background-image: url('../../resources/icons/done.svg');
+  background-image: url('../resources/icons/done.svg');
   left: -35px;
   top: 0;
   width: 24px;
@@ -177,7 +177,7 @@ input[type='radio']:checked::after {
   right: 12px;
   width: 16px;
   height: 10px;
-  background: url(../../resources/icons/arrow-select-gray1.svg);
+  background-image: url("../resources/icons/arrow-select-gray1.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -208,17 +208,17 @@ input[type='radio']:checked::after {
 
   .format-type__excel::before {
     @include format-card-image;
-    background-image: url("../../resources/icons/xls.svg");
+    background-image: url("../resources/icons/xls.svg");
   }
 
   .format-type__word::before {
     @include format-card-image;
-    background-image: url("../../resources/icons/docx.svg");
+    background-image: url("../resources/icons/docx.svg");
   }
 
   .format-type__pdf::before {
     @include format-card-image;
-    background-image: url("../../resources/icons/pdf.svg");
+    background-image: url("../resources/icons/pdf.svg");
   }
 
   input[type=radio]:checked::before,
@@ -360,7 +360,7 @@ input[type='radio']:checked::after {
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    background-image: url(../../resources/icons/checkbox-check.svg);
+    background-image: url("../resources/icons/checkbox-check.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;

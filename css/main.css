@@ -291,7 +291,7 @@ label {
 .form-items__title::before {
   content: "";
   position: absolute;
-  background-image: url("../../resources/icons/done.svg");
+  background-image: url("../resources/icons/done.svg");
   left: -35px;
   top: 0;
   width: 24px;
@@ -401,7 +401,7 @@ input[type=radio]:checked::after {
   right: 12px;
   width: 16px;
   height: 10px;
-  background: url(../../resources/icons/arrow-select-gray1.svg);
+  background-image: url("../resources/icons/arrow-select-gray1.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -440,7 +440,7 @@ input[type=radio]:checked::after {
   background-position: center;
   border: none;
   border-radius: 0%;
-  background-image: url("../../resources/icons/xls.svg");
+  background-image: url("../resources/icons/xls.svg");
 }
 .format-type .format-type__word::before {
   content: "";
@@ -455,7 +455,7 @@ input[type=radio]:checked::after {
   background-position: center;
   border: none;
   border-radius: 0%;
-  background-image: url("../../resources/icons/docx.svg");
+  background-image: url("../resources/icons/docx.svg");
 }
 .format-type .format-type__pdf::before {
   content: "";
@@ -470,7 +470,7 @@ input[type=radio]:checked::after {
   background-position: center;
   border: none;
   border-radius: 0%;
-  background-image: url("../../resources/icons/pdf.svg");
+  background-image: url("../resources/icons/pdf.svg");
 }
 .format-type input[type=radio]:checked::before,
 .format-type input[type=radio]:checked::after {
@@ -587,7 +587,7 @@ input[type=radio]:checked::after {
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  background-image: url(../../resources/icons/checkbox-check.svg);
+  background-image: url("../resources/icons/checkbox-check.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -711,7 +711,7 @@ input[type=radio]:checked::after {
 .nav-title::after {
   content: "";
   position: absolute;
-  background-image: url("../../resources/icons/icon-14-addtheme.svg");
+  background-image: url("../resources/icons/icon-14-addtheme.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 14px;
