@@ -721,6 +721,7 @@ input[type=radio]:checked::after {
 }
 
 .nav-list__item button {
+  text-align: left;
   padding: 10px 20px;
   border: none;
   border-top: 1px solid #edeeef;
