@@ -11,24 +11,20 @@
   padding-top: 70px;
 }
 
-.nav-title {
-  @include styleTitle;
-  margin-bottom: 20px;
-  margin: 0 20px 10px;
-
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 20px;
 }
 
-.nav-title::after {
-  content: '';
-  position: absolute;
-  background-image: url("../resources/icons/icon-14-addtheme.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 14px;
-  height: 14px;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.nav-btn {
+  border: none;
+  background-color: $whiteColor;
+}
+
+.nav-title {
+  @include styleTitle;
 }
 
 .nav-list__item button {

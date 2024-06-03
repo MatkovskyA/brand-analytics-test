@@ -283,8 +283,8 @@ label {
 .form-items__title {
   font-size: 17px;
   font-weight: 700;
-  position: relative;
   color: #292f37;
+  position: relative;
   margin-bottom: 8px;
 }
 
@@ -699,26 +699,22 @@ input[type=radio]:checked::after {
   padding-top: 70px;
 }
 
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 20px;
+}
+
+.nav-btn {
+  border: none;
+  background-color: #ffffff;
+}
+
 .nav-title {
   font-size: 17px;
   font-weight: 700;
-  position: relative;
   color: #292f37;
-  margin-bottom: 20px;
-  margin: 0 20px 10px;
-}
-
-.nav-title::after {
-  content: "";
-  position: absolute;
-  background-image: url("../resources/icons/icon-14-addtheme.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 14px;
-  height: 14px;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .nav-list__item button {

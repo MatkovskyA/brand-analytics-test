@@ -59,6 +59,7 @@
 
 .form-items__title {
   @include styleTitle;
+  position: relative;
   margin-bottom: 8px;
 }
 
