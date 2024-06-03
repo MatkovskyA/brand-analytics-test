@@ -171,6 +171,7 @@ label {
 }
 
 .nav-list__btn {
+  display: block;
   background-color: inherit;
   border: none;
   padding: 17px 23px 19px;
@@ -717,7 +718,8 @@ input[type=radio]:checked::after {
   color: #292f37;
 }
 
-.nav-list__item button {
+.nav-list__item a {
+  display: block;
   text-align: left;
   padding: 10px 20px;
   border: none;

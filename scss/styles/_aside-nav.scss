@@ -27,7 +27,8 @@
   @include styleTitle;
 }
 
-.nav-list__item button {
+.nav-list__item a {
+  display: block;
   text-align: left;
   padding: 10px 20px;
   border: none;
